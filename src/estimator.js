@@ -21,7 +21,7 @@ function numberOfDay(value, periodType) {
 //  compute the infectionByRequestedTime for a light impact
 //  given the currentlyInfected
 function impactInfectionsByRequestedTime(currentlyInfected, NOD) {
-  return currentlyInfected * (2 * Math.trunc(NOD / 3));
+  return currentlyInfected * (2 ** Math.trunc(NOD / 3));
 }
 //  compute the infectionByRequestedTime for a severe impact
 //  given the currentlyInfected
