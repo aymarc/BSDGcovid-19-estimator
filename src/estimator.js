@@ -31,22 +31,22 @@ function severeImpactInfectionsByRequestedTime(currentlyInfected, NOD) {
 //  compute the severeCasesByRequestedTime for a light impact given
 //  the infectionsByRequestedTime[IBRT]
 function lsimpactSevereCasesByRequestedTime(IBRT) {
-  return Math.trunc(IBRT / 0.15);
+  return Math.trunc(IBRT * 0.15);
 }
 //  compute the hospitalBedsbyRequestedTime for a light and severe impact
 //  given the totalHospitalBeds and severeCasesByRequestedTime[SCBRT]
 function lsimpactHospitalBedsByRequestedTime(totalHospitalBeds, SCBRT) {
-  return Math.trunc((totalHospitalBeds / 0.35) - SCBRT);
+  return Math.trunc((totalHospitalBeds * 0.35) - SCBRT);
 }
 //  compute the casesForICUByRequestedTime for a light and severe impact given
 //  the infectionsByRequestedTime[IBRT]
 function lsimpactCasesForICUByRequestedTime(IBRT) {
-  return IBRT / 0.05;
+  return IBRT * 0.05;
 }
 //  compute the casesForVentilatorsByRequestedTime for a light and severe impact given
 //  the infectionsByRequestedTime[IBRT]
 function lsimpactCasesForVentilatorsByRequestedTime(IBRT) {
-  return IBRT / 0.02;
+  return IBRT * 0.02;
 }
 //  compute the casesForVentilatorsByRequestedTime for a light and severe impact given
 //  the infectionsByRequestedTime[IBRT], avgDailyIncomePopulation[avgDIP],
