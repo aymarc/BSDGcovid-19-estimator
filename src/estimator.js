@@ -36,7 +36,7 @@ function lsimpactSevereCasesByRequestedTime(IBRT) {
 //  compute the hospitalBedsbyRequestedTime for a light and severe impact
 //  given the totalHospitalBeds and severeCasesByRequestedTime[SCBRT]
 function lsimpactHospitalBedsByRequestedTime(totalHospitalBeds, SCBRT) {
-  return Math.trunc(totalHospitalBeds / 0.35 - SCBRT);
+  return Math.trunc((totalHospitalBeds / 0.35) - SCBRT);
 }
 //  compute the casesForICUByRequestedTime for a light and severe impact given
 //  the infectionsByRequestedTime[IBRT]
